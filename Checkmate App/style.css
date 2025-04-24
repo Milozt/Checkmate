@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }  
+
+.task-container {
+  margin-top: 100px; /* So it doesn't overlap with the title */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.app-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: purple;
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+li.completed {
+  text-decoration: line-through;
+  background-color: #d1c4e9;
+}
+
+.task-checkbox {
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e57373;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #f44336;
+}
+
+#add-task-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #6a1b9a;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #9c4d97;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#progress-fill {
+  height: 100%;
+  background-color: #6a1b9a;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+.bounce {
+  animation: bounce 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.app-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 4rem;
+  color: purple;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.app-title img {
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
